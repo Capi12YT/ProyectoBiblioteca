@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Libros</title>
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+	crossorigin="anonymous">
+<script
+	src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+	integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+	crossorigin="anonymous"></script>
+</head>
+<body>
+	<div class="container mt-5">
+		<div class="row justify-content-between">
+			<div class="col-4">
+				<img height="50"
+					src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAflBMVEX///8AAAAxMTGzs7Px8fEKCgoODg50dHTm5ubf39/j4+Oampr7+/vr6+s+Pj7w8PDNzc1aWlqrq6vT09PDw8OWlpZsbGxHR0eKiopSUlKAgIBiYmKioqKQkJAjIyN+fn5BQUEfHx+9vb0qKioVFRUiIiJLS0tvb29lZWWwsLDEUQ0AAAAEoElEQVR4nO2d63aqOhRGQ7HFCioXL2ixVup26/u/4Km6a4MJis1aiXK++RM6+jFHgNwcLCEAAAAAAAAAAAAAAAAA/P9IJ090TJNJnsadZsmdOA3zYDsb0GRPUm3KcOAx8L4sL1v2yzlD8GCoiXqjzznyEmR1et3xlCn0TQ3rMUUdSHo6v9GMMVJN3DGmfZErgfETa+BOCQxZ8zzvo/o4drbMeaF1Q++zK6VlK+44B4be6uf9FrOHOTH0BhYF3Rh6wTEqshB1zXA56t5EL4tH5a5YBFe6t+IQpet5n5ahP8p6t8VWGc2bG8bK2RvIdsFnreL+P+fK0aA0CfxBvvsvGqonb6Vfvq31imEWnB35LCLjvG+KhoavFGHDstmIZUznJ8RrM8Nn3aj1V3l/r/qttcO5X9N5aWbYcMrTgO6VdpxRNqBwYShE+eeCYEIYdMCFoegktYID4hZ0ZCjEos6wT5sjnBnK73AZnzhGuDMUqU5wQ50iHBqKucbQaOBUgztDofYaHE3o0rCvGBINRas4NFQfRfKeYo9LQ3G27kTe2R9wauhXDRm6CuHYUFQNeTLcGlYmvmuWiMuGC27DTDbcskTIhmPl5JzbsHKbqkvgJEiGgXLyk91QnmTot7+MkQyV7kgaHXMZynMMlv6+ali9TSN5+M9lKO/9kCwFqciGXj7814xRuKn2xlyGsWVDz1t95Ps5qDIo5jKUdyjtGO7pn481WmeYC3UZpV2GK7FquaEnnltvqB6C4W+BIQEwhKEhMCQAhjA0BIYEwBCGhsCQABjC0BAYEgBDGBoCQwJgCENDYEgADGFoCAwJgCEMDYEhATCEoSEwJACGMDQEhgTAEIaGwJAAGMLQEBgSAEMYGgJDAmAIQ0NgSAAMYWgIDAmAIQwNgSEBMIShITAkAIYwNASGBMAQhobAkAAYwtCQbusN+9IHm2g/p3/CsaHY/GTQf6z8gGvDn08XzpgSXBtGq++IEVOCa8NTgQ2mb3vegaGI/Hw5L5geQnEPhtzAEIb3DwxheP/A8Bu+HpkbtVCI3rC2uO3dk2lsdIZcI39+dNWzdIbeX6racnYZnhcerDf01klgQD5Oyzi+caGim8WxXyzmv49N9CUX9YYkrKZzv9FqxWu5mL2zXQaj4YH1IrtYFSiK1aKdtHAbfvEe1nY/2ZI/3oLhF0FX58daefyEHUPPW6jtN7CTbMvQe65Wkou0b3YOrBlWy6Jk9SWDqbFoKJXvGVlMtWl4qvJU2gy1avivzFP3+h8SYtfwsBYcfViNtGzoTf2dpV7iG9uG9hE1NdBbw1o7aWwTSaVWWBvZ6Wf+7WFf7zTinqC5JD9OTjuZT0BahOPFcjs1uqKXZLkYh0VKcUG+n3Gt/GZluL15VWKVpCOmX2gw8bqbNJ8/vO2YfmDDTJTpKo4rbNLHXWTfb9xvrvhNHrP1ZLJLjvoFnIcjrnOcPu4OyTmFVrBwfVmU9NQp03t7GvDI5PwOfdx92Dqqg8ON68vhQFZ8uriZ8bC8nQRXj9zHXyA6vW7a9pI5ER3non8ea4R9G9n8I/FdXwQAAAAAAAAAAAAAAACAdvIfZyNnSQDIDogAAAAASUVORK5CYII=">
+			</div>
+			<div class="col-4">
+				<ul class="nav justify-content-end">
+					<li class="nav-item"><a class="nav-link " th:href="@{/libro}">Libro</a></li>
+					<li class="nav-item"><a class="nav-link" th:href="@{/lector}">Lector</a></li>
+					<li class="nav-item"><a class="nav-link"
+						th:href="@{/prestamo}">Prestamo</a></li>
+				</ul>
+			</div>
+
+			<div class="w-50 m-auto mt-5">
+				<form class="row g-3" action="#" th:action="@{/save}" th:object="${libro}" method="POST">
+					<div class="col-md-6">
+						<label for="inputNombre" class="form-label">Nombre</label> <input th:field="*{nombre}"
+							type="text" class="form-control" id="inputNombre">
+					</div>
+					<div class="col-md-6">
+						<label for="inputEditorial" class="form-label">Editorial</label> <input th:field="*{editorial}"
+							type="text" class="form-control" id="inputEditorial">
+					</div>
+					<div class="col-md-12">
+						<label for="inputTipo" class="form-label">Tipo</label> <select th:field="*{tipo}"
+							id="inputTipo" class="form-select">
+							  <option th:each="tipo : ${tipos}" 
+								th:value="${tipo}"
+								th:text="${tipo}">
+								</option>
+								
+						</select>
+					</div>
+					<div class="col-6">
+						<label for="inputAnyo" class="form-label">Año</label> <input th:field="*{anyo}"
+							type="number" class="form-control" id="inputAnyo"
+							placeholder="Año del libro">
+					</div>
+					<div class="col-6">
+						<label for="inputCantidad" class="form-label">Cantidad</label> <input th:field="*{cantidad}"
+							type="number" class="form-control" id="inputCantidad"
+							placeholder="Numero de libros">
+					</div>
+					<div class="col-md-6">
+						<label for="inputNombreAutor" class="form-label">Autor</label> <input th:field="*{AutorNombre}"
+							type="text" class="form-control" id="inputNombreAutor">
+					</div>
+					<div class="col-md-6">
+						<label for="inputNacionalidadAutor" class="form-label">Nacionalidad 
+							Autor</label> <input type="text" class="form-control" th:field="*{NacionalidadAutor}"
+							id="inputNacionalidadAutor">
+					</div>
+					<!--<div class="col-md-12">
+						<label for="inputFechaNacAutor" class="form-label">Fecha
+							Nacimiento Autor</label> <input type="date" pattern="\d{4}-\d{2}-\d{2}"  class="form-control" th:field="*{FechaNacAutor}" th:value="*{FechaNacAutor}" 
+							id="inputFechaNacAutor">
+					</div> -->
+
+
+					<div class="col-12 text-center">
+						<button type="submit" class="btn btn-primary ">Añadir
+							Libro</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
